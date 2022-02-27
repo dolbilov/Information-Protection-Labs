@@ -8,9 +8,10 @@ namespace InformationProtectionLab2
 {
     public class RSAManager
     {
-        private const string OriginalFileName = "1.original.txt";
-        private const string DecodedFileName = "2.decoded.txt";
-        private const string EncodedFileName = "3.encoded.txt";
+        private const string Prefix = "../../../res/";
+        private const string OriginalFileName = Prefix + "1.original.txt";
+        private const string DecodedFileName = Prefix + "2.decoded.txt";
+        private const string EncodedFileName = Prefix + "3.encoded.txt";
         
         # region Fields for math
 
