@@ -9,7 +9,7 @@ namespace InformationProtectionLab1
 {
     public static class Program
     {
-        private const string Filename = "text.doc";
+        private const string Filename = "../../../res/text.doc";
         
         private static void Main()
         {
@@ -30,26 +30,26 @@ namespace InformationProtectionLab1
                 }
                 
                 Console.WriteLine("\n\nTask 2");
-                var cm = new CryptoManager("key.txt");
+                var cm = new CryptoManager("../../../res/key.txt");
                 int command;
                 do
                 {
-                    Console.WriteLine("What would you do?\n1 - Encode\n2 - Decode\n0 - Exit");
+                    Console.WriteLine("What would you do?\n1 - Decode\n2 - Encode\n0 - Exit");
                     command = Convert.ToInt32(Console.ReadLine());
                     if (command == 1)
                     {
-                        cm.EncodeFile(Filename);
+                        cm.DecodeFile(Filename);
                     }
                     else if (command == 2)
                     {
-                        cm.DecodeFile(Filename);
+                        cm.EncodeFile(Filename);
                     }
                 } while (command is 1 or 2);
 
             }
             catch (Exception e)
             {
-                Console.WriteLine($"Some error occured: {e.Message}");
+                Console.WriteLine($"Some error occurred: {e.Message}");
                 Environment.Exit(-1);
             }
         }
