@@ -73,6 +73,7 @@ int main() {
 			text << byte;
 		}
 
+
 		text.close();
 	}
 	else if (command == 2) {
